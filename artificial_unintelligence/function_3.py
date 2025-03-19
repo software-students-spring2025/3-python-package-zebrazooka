@@ -2,11 +2,10 @@ import random
 import json
 import os
 
-with open("artificial_unintelligence/word_bank.json", "r", encoding="utf-8") as input:
-    try:
-        word_bank = json.load(input)
-    except json.JSONDecodeError:
-        raise ValueError(f"Invalid JSON format in '{input}'.")
+def load_word_bank(filename = "artificial_unintelligence/word_bank.json"):
+    """This function helps to load the word bank json file that Jason put in"""
+    with open(filename) as file: 
+        return json.load(file)
 
 def generate_sentence(start_letter: str) -> str:
     """
@@ -35,6 +34,7 @@ def generate_sentence(start_letter: str) -> str:
     ]
 
     key = start_letter.lower()
+    word_bank = load_word_bank()
 
     if key not in word_bank:
         raise ValueError(f"You provided an unsupported letter '{start_letter}'. Available letters are: {list(word_bank.keys())}")
