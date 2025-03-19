@@ -7,7 +7,7 @@ name = "artificial-unintelligence"
 description = "artifical unintelligence, a funny AI"
 version = "0.1.0"
 authors = [
-  { name="Jonathan Gao, ", email="" },
+  # { name="Jonathan Gao, ", email="" },
   { name = "Buki Seid", email = "mds831@nyu.edu"}
 ]
 license = { file = "LICENSE" }
