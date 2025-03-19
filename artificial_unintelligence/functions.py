@@ -1,6 +1,8 @@
 import random
 """need random to get something random"""
 import json 
+import sys
+import os
 
 def get_random_word(category: str) -> str:
     """
@@ -33,7 +35,10 @@ def get_random_word(category: str) -> str:
 
 def load_word_bank(filename = "artificial_unintelligence/word_bank.json"):
     """This function helps to load the word bank json file that Jason put in"""
-    with open(filename) as file: 
+    base_dir = os.path.dirname(os.path.abspath(__file__))  # Get directory of the script
+    file_path = os.path.join(base_dir, "word_bank.json")  # Construct absolute path
+
+    with open(file_path) as file:
         return json.load(file)
 
 def random_sentence_reply(input_text=None):
@@ -94,4 +99,28 @@ def random_sentence_reply(input_text=None):
     sentence = sentence[0].upper() + sentence[1:] + str(random.choice([".","!","?"]))
 
     return sentence
+
+# Function 4: Keyboard smash
+
+def keyboard_smash(smash: str) -> str: 
+    word_data = load_word_bank()
+
+    words = []
+
+    for letter in smash.lower():
+        if letter in word_data:
+            word_bank = word_data[letter]
+            word_choices = word_bank.get('nouns', []) + word_bank.get('adjectives', []) + \
+                           word_bank.get('verbs', []) + word_bank.get('adverbs', [])
+            if word_choices:
+                chosen_word = random.choice(word_choices)
+                words.append(chosen_word)
+            else:
+                words.append(letter)  # If no words available, just use the letter
+        else:
+            words.append(letter)  # If letter not in word bank, keep it as is
+    
+    sentence = " ".join(words).capitalize() + "."
+    return sentence
+
 

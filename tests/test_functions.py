@@ -49,3 +49,4 @@ class TestRandomSentenceReply:
         
         # At least two of the five results should be different
         assert len({resulttable[0], resulttable[1], resulttable[2], resulttable[3], resulttable[4]}) > 1
+
