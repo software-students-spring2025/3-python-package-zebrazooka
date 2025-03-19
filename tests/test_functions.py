@@ -2,7 +2,7 @@
 import pytest
 import json
 import os
-from artificial_unintelligence.functions import get_random_word, load_word_bank, random_sentence_reply, keyboard_smash
+from artificial_unintelligence.functions import get_random_word, load_word_bank, random_sentence_reply
 
 class TestLoadWordBank:
     """tests that the word bank actually loads"""
