@@ -2,7 +2,7 @@
 import pytest
 import json
 import os
-from artificial_unintelligence.functions import get_random_word, load_word_bank, random_sentence_reply
+from artificial_unintelligence.functions import get_random_word, load_word_bank, random_sentence_reply, keyboard_smash
 
 class TestLoadWordBank:
     """tests that the word bank actually loads"""
@@ -49,3 +49,4 @@ class TestRandomSentenceReply:
         
         # At least two of the five results should be different
         assert len({resulttable[0], resulttable[1], resulttable[2], resulttable[3], resulttable[4]}) > 1
+
