@@ -100,6 +100,49 @@ def random_sentence_reply(input_text=None):
 
     return sentence
 
+# Function 3: sentence with same start letter for all words
+def same_start_letter_generate(start_letter: str) -> str:
+    """
+    Generates a sentence where all words start with the given letter.
+
+    Parameters:
+        start_letter (str): The letter that all words in the sentence should start with.
+
+    Returns:
+        str: A generated sentence following a random sentence structure.
+
+    Raises:
+        ValueError: If the given letter is not available in the word bank.
+
+    Example:
+        >>> same_start_letter_generate('b')
+        'Beautiful banana bounces briskly.'
+    """
+
+    sentence_structures = [
+        "{adjective} {noun} {verb} {adverb}.",
+        "{adjective} {noun} {verb} {adjective} {noun} {adverb}.",
+        "{noun} {verb} {adverb} {adjective} {noun}.",
+        "{adjective} {noun} {adverb} {verb} {adjective} {noun}.",
+        "{noun} {adverb} {verb} {adjective} {noun}."
+    ]
+
+    key = start_letter.lower()
+    word_bank = load_word_bank()
+
+    if key not in word_bank:
+        raise ValueError(f"You provided an unsupported letter '{start_letter}'. Available letters are: {list(word_bank.keys())}")
+
+    noun = random.choice(word_bank[key]['nouns'])
+    adjective = random.choice(word_bank[key]['adjectives'])
+    verb = random.choice(word_bank[key]['verbs'])
+    adverb = random.choice(word_bank[key]['adverbs'])
+
+    sentence_template = random.choice(sentence_structures)
+    sentence = sentence_template.format(noun=noun, adjective=adjective, verb=verb, adverb=adverb)
+
+    return sentence.capitalize()
+
 # Function 4: Keyboard smash
 
 def keyboard_smash(smash: str) -> str: 
