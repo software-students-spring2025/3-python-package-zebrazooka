@@ -19,6 +19,8 @@ jobs:
       - name: Turn on 'editable' mode
         run: |
           pipenv install -e .
+      - name: Debug functions.py content
+        run: cat artificial_unintelligence/functions.py
       - name: Test with pytest
         run: |
           pipenv install pytest
