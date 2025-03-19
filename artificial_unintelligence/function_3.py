@@ -2,7 +2,7 @@ import random
 import json
 import os
 
-with open("word_bank.json", "r", encoding="utf-8") as input:
+with open("artificial_unintelligence/word_bank.json", "r", encoding="utf-8") as input:
     try:
         word_bank = json.load(input)
     except json.JSONDecodeError:

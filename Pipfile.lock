@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ac677c01a542fd13a8b4fc07ebe658798815a75d1f7443f21020677213283f38"
+            "sha256": "633d43c509bc22652a3c7a641fb846e8f1f64a9c7ca27b914851be51adf101a7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,12 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "artificial-unintelligence": {
+            "editable": true,
+            "file": "."
+        }
+    },
     "develop": {
         "backports.tarfile": {
             "hashes": [
