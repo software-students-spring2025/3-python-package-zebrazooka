@@ -48,3 +48,31 @@ def generate_sentence(start_letter: str) -> str:
     sentence = sentence_template.format(noun=noun, adjective=adjective, verb=verb, adverb=adverb)
 
     return sentence.capitalize()
+
+# Function 4: Keyboard smash
+
+def keyboard_smash(smash: str) -> str: 
+    word_data = load_word_bank()
+
+    words = []
+
+    for letter in smash.lower():
+        if letter in word_data:
+            word_bank = word_data[letter]
+            noun = random.choice(word_bank.get('nouns', [letter]))
+            adj = random.choice(word_bank.get('adjectives', [letter]))
+            verb = random.choice(word_bank.get('verbs', [letter]))
+            adverb = random.choice(word_bank.get('adverbs', [letter]))
+
+            sentence_structure = random.choice([
+                f"{adj} {noun} {verb} {adverb}.",
+                f"{noun} {verb} {adverb} {adj} {noun}.",
+                f"{adj} {noun} {adverb} {verb} {adj} {noun}."
+            ])
+
+            words.append(sentence_structure)
+        else:
+            words.append(letter)
+
+        
+    return " ".join(words)
