@@ -1,7 +1,9 @@
 import pytest
 import random
 import re
-from artificial_unintelligence.function_3 import generate_sentence, word_bank
+from artificial_unintelligence.function_3 import generate_sentence, load_word_bank
+
+word_bank = load_word_bank()
 
 def test_valid_letter():
     """Test if a randomly selected valid letter generates a proper sentence."""
