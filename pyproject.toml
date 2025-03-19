@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "artificial-unintelligence"
+description = "artifical unintelligence, a funny AI"
+version = "0.1.0"
+authors = [
+  # { name="Jonathan Gao, ", email="" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["python", "fun", "humor", "random", "artifical intelligence", "AI"]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+# Update these URLs to match your project
+"Homepage" = "https://github.com/software-students-spring2025/3-python-package-zebrazooka/tree/main/artificial_unintelligence"
+"Repository" = "https://github.com/software-students-spring2025/3-python-package-zebrazooka/tree/main/artificial_unintelligence.git"
+"Bug Tracker" = "https://github.com/software-students-spring2025/3-python-package-zebrazooka/tree/main/artificial_unintelligence/issues"
+
+[project.scripts]
+artificial-unintelligence = "artificial_unintelligence.__main__:main"
