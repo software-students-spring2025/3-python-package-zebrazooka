@@ -4,6 +4,10 @@ import json
 import os
 import random
 import re
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from artificial_unintelligence.functions import get_random_word, load_word_bank, random_sentence_reply, same_start_letter_generate
 
 class TestLoadWordBank:
