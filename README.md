@@ -10,7 +10,7 @@ Our project, artifical unintelligence, builds upon the rapidly growing AI/ML fie
 
 By: [Jonathan Gao](https://github.com/jg169), [Jason Mai](https://github.com/JasonMai233), [Nawab Mahmood](https://github.com/NawabMahmood), [dibukseid](https://github.com/dibukseid)
 
-[Link to PyPI website for the proj](https://pypi.org/project/artificial-unintelligence/0.1.1/)
+[Link to PyPI website for the proj](https://pypi.org/project/artificial-unintelligence/0.1.3/)
 
 
 ## How-To
