@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "artificial-unintelligence"
 description = "artifical unintelligence, a funny AI"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
   { name="Jonathan Gao, ", email="ruoyuanmai20030513@gmail.com" },
   { name = "Buki Seid", email = "mds831@nyu.edu"},
