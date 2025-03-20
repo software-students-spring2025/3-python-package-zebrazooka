@@ -1,5 +1,5 @@
 import random
-"""need random to get something random"""
+"""need to import random to get something random."""
 import json 
 import sys
 import os
@@ -34,7 +34,7 @@ def get_random_word(category: str) -> str:
     return random.choice(words[key])
 
 def load_word_bank(filename = "artificial_unintelligence/word_bank.json"):
-    """This function helps to load the word bank json file that Jason put in"""
+    """This function takes in a file path (relative path works) and helps to load the word bank json file."""
     base_dir = os.path.dirname(os.path.abspath(__file__))  # Get directory of the script
     file_path = os.path.join(base_dir, "word_bank.json")  # Construct absolute path
 
@@ -42,7 +42,19 @@ def load_word_bank(filename = "artificial_unintelligence/word_bank.json"):
         return json.load(file)
 
 def random_sentence_reply(input_text=None):
-    """This just returns a randomly outputted sentence constructed from a sentence structure"""
+    """This takes any text and just returns a randomly outputted sentence constructed from a sentence structure
+    
+    Parameters:
+        input_text (str): This is any random query or sentence, or none at all. (It is randomly replied to so it doesn't affect the output)
+
+    Returns:
+        str: A randomly generated sentence of nouns, verbs, adjectives, and some special words. 
+
+
+    Example:
+        >>> random_sentence_reply("hi")
+        'Sun were freely yawn fearless dragon but observe outstanding flower'
+        """
     
     #got these based on sentences 
     sentence_structures = [
@@ -146,6 +158,19 @@ def same_start_letter_generate(start_letter: str) -> str:
 # Function 4: Keyboard smash
 
 def keyboard_smash(smash: str) -> str: 
+    """ This function takes some random letters as the input and then in the ouput sends out a sentence with words starting with the letters in the input.
+    
+    Parameters:
+        smash (str): A random series of letters. 
+
+    Returns:
+        str: A sequence of words that starts with the letters corresponding to the random sequence of letters in smash parameter. 
+
+
+    Example:
+        >>> keyboard_smash('ero')
+        'Enthusiastically rainbow orange.'
+    """
     word_data = load_word_bank()
 
     words = []
