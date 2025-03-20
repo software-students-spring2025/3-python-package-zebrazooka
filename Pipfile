@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 artificial-unintelligence = {file = ".", editable = true}
+build = "*"
+twine = "*"
+setuptools = "*"
+wheel = "*"
 
 [dev-packages]
 pytest = "*"
