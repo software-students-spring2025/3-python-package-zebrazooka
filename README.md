@@ -34,7 +34,8 @@ In your project include
 
 import artificial_unintelligence
 
-from artificial_unintelligence import random_sentence_reply, get_random_word, generate_sentence, keyboard_smash
+from artificial_unintelligence.functions import get_random_word, random_sentence_reply, same_start_letter_generate, keyboard_smash
+
 ```
 
 ### Functions 
@@ -77,7 +78,7 @@ print(random_sentence)
 
 
 
-Use the generate_sentence function to generate a sentence that all starts with the same letter. It takes an input as an argument or parameter. 
+Use the same_start_letter_gemerate function to generate a sentence that all starts with the same letter. It takes an input as an argument or parameter. 
 
 ```python 
 
@@ -128,13 +129,25 @@ Install the package in development mode. If no edits would need to be made, then
 pipenv install -e . 
 ```
 
-Run the demo using pipenv 
+To install build 
+
+```
+pipenv install build
+```
+
+Generate distribution packages 
+```
+pipenv run python -m build
+```
+
+
+Run the demo and test using pipenv 
 
 ```
 pipenv run python demo.py 
 ```
 
-### If you would like to contribute 
+### If you would like to contribute (and how to test before you do)
 
 Follow the steps to set Up the virtual environment, install dependencies, build and test , make sure to do the 'pipenv install -e .' command for easy editing. 
 
@@ -164,7 +177,7 @@ Push to the branch
 git push origin newfeature
 ```
 
-Then go to github and open a pull request. 
+Then go to github and open a pull request. We will look at it and the maintainer will update the PyPI project.
 
 
 ### How to import data 
