@@ -1,6 +1,6 @@
 #same as the __main__ file rn (which can also be used for testing) but that may change in the future 
 
-from artificial_unintelligence.functions import get_random_word, random_sentence_reply, same_start_letter_generate
+from artificial_unintelligence.functions import get_random_word, random_sentence_reply, same_start_letter_generate, keyboard_smash
 
 def main():
     print("Welcome to Artificial Unintelligence Demo!")
@@ -16,8 +16,10 @@ def main():
     letter = input(f"give me a random letter: ")
     print(f"Random Sentence made of word start with " + letter + ": " + same_start_letter_generate(letter))
 
-    print("\n4. Function 4")
- 
+    print("\n4. Smash your keyboard! I'll translate!")
+    smash = input(f"Smash keys: ")
+    print(f"Keyboard Smash Translation: {keyboard_smash(smash)}")
+    
 
 if __name__ == "__main__":
     main()
