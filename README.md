@@ -47,17 +47,17 @@ Use the get_random_word function. The parameters can be 'noun', 'verb', or 'adje
 
 #To get a random noun
 random_noun = get_random_word('noun')
-#print(random_noun) 
+print(random_noun) 
 #The output would look something like :'dog'
 
 #To get a random verb
 random_verb = get_random_word('verb')
-#print(random_noun)
+print(random_noun)
 #The output would look something like : 'jump' 
 
 #To get a random adjective 
 random_adjective = get_random_word('adjective')
-#print(random_adjectove)
+print(random_adjectove)
 #The output would look something like 'happy'
 
 ```
@@ -69,7 +69,7 @@ Use the random_sentence function to unintelligently reply to a query that is inp
 ```python
 #Reply to a query with a randomly generated sentence. 
 random_sentence = random_sentence_reply('what do you think of fishes')
-#print(random_sentence)
+print(random_sentence)
 # This output would be for example : "Quickly happy zebra loudly jumps scary car in big tree."
 ```
 
@@ -82,8 +82,8 @@ Use the generate_sentence function to generate a sentence that all starts with t
 ```python 
 
 # To generate a sentence where the words start with e
-e_sentence = generate_sentence('e')
-#print(e_sentence)
+e_sentence = same_start_letter_generate('e')
+print(e_sentence)
 #example output would be: Electric eels emulsify eaton
 ```
 
